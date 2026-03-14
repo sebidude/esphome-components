@@ -83,7 +83,7 @@ void AXS5106Touchscreen::update_touches() {
     int16_t x = ((data[idx] & 0xf) << 8) | data[idx + 1];
     int16_t y = ((data[idx + 2] & 0xf) << 8) | data[idx + 3];
     this->add_raw_touch_position_(i, x, y);
-    ESP_LOGD(TAG, "Read touch %d: x:%d y:%d", i, x, y);
+    ESP_LOGVV(TAG, "Read touch %d: x:%d y:%d", i, x, y);
   }
 }
 
