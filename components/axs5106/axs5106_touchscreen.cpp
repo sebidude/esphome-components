@@ -55,7 +55,7 @@ void AXS5106Touchscreen::update_touches() {
    */
   i2c::ErrorCode err = this->write(&TOUCH_AXS5106_TOUCH_POINTS_REG, 1);
   if (err != i2c::ERROR_OK) {
-    this->status_set_warning(ESP_LOG_MSG_COMM_FAIL);
+    //this->status_set_warning(ESP_LOG_MSG_COMM_FAIL);
     this->skip_update_ = true;
     ESP_LOGE(TAG, "Read failed");
     return;
